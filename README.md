@@ -1,39 +1,15 @@
-# atom-shell example app
+# to-fix on-top
 
-This is an example atom-shell app based off these instructions:
-- https://github.com/atom/atom-shell/blob/master/docs/tutorial/quick-start.md
+This is an adapted version of the basic Atom Shell wrapper to allow a copy of [`to-fix`](lab.github.io/to-fix) to run on top of JOSM in a corner of the window.
 
-To run you should be able to do the following:
+The only thing that makes this a pain is the need to move OAuth credentials over from your real browser to this one (the OSMAuth process does not work in Atom).
 
-`./run.sh`
+Steps:
 
-OR on Windows:
-
-`run`
-
-OR manually:
-
-Install grunt if you haven't already
-
-```
-npm install -g grunt-cli
-```
-
-Then run the following to download version 0.12.2 of atom-shell
-```
-cd ./build
-npm install
-grunt download-atom-shell
-```
-
-Then you should be able to run the app:
-
-```
-./build/atom-shell/Atom.app/Contents/MacOS/Atom ./hello-app
-```
-
-OR on Windows:
-
-```
-./build/atom-shell/atom ./hello-app
-```
+1. download this package
+2. navigate to `to-fix` in your normal browser. Be sure that you have already authenticated.
+3. run the following code in the developer console:
+  > var obj=new Object(); Object.keys(localStorage).forEach(function(k){ if (k.match(/^(http|user)/)) { obj[k] = localStorage[k].replace(/\"/g,''); }}); document.write(JSON.stringify(obj,null,4));
+4. copy the resulting JSON and save it to a file called `osmauth.json` in the `to-fix-on-top` subdirectory (there is an example file in there)
+5. run `./run.sh` (or `run.cmd` in Windows?)
+6. fix some things!

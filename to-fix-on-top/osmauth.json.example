@@ -1,0 +1,10 @@
+{
+  "http://www.openstreetmap.orgoauth_request_token_secret": "",
+  "http://www.openstreetmap.orgoauth_token": "",
+  "http://www.openstreetmap.orgoauth_token_secret": "",
+  "https://www.openstreetmap.orgoauth_request_token_secret": "",
+  "https://www.openstreetmap.orgoauth_token": "",
+  "https://www.openstreetmap.orgoauth_token_secret": "",
+  "userid": "123456",
+  "username": "Some Mapper"
+}

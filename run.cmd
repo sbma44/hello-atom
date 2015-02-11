@@ -10,4 +10,4 @@ pushd "%SCRIPT_DIR%\build"
   call grunt download-atom-shell
 popd
 
-"%SCRIPT_DIR%\build\atom-shell\atom" "%SCRIPT_DIR%\hello-app"
+"%SCRIPT_DIR%\build\atom-shell\atom" "%SCRIPT_DIR%\to-fix-on-top"

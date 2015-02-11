@@ -21,7 +21,15 @@ app.on('ready', function() {
   mainWindow = new BrowserWindow({width: 800, height: 600, 'always-on-top': true});
 
   // and load the index.html of the app.
-  mainWindow.loadUrl('http://osmlab.github.io/to-fix/');
+  mainWindow.loadUrl('http://osmlab.github.io/to-fix');
+  
+  // load oauth credentials
+  var code = "";
+  var osm_auth = require('./osmauth.json');
+  Object.keys(osm_auth).forEach(function(key) {
+      code += "localStorage.setItem('" + key + "','" + osm_auth[key] + "');";
+  });
+  mainWindow.webContents.executeJavaScript(code);
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function() {
