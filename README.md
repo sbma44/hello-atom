@@ -14,4 +14,5 @@ var obj=new Object(); Object.keys(localStorage).forEach(function(k){ if (k.match
 ```
 - copy the resulting JSON and save it to a file called `osmauth.json` in the `to-fix-on-top` subdirectory (there is an example file in there)
 - run `./run.sh` (or `run.cmd` in Windows?)
+- (you might then need to click on the auth link in the sidebar once)
 - fix some things!
