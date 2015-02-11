@@ -2,7 +2,7 @@
 
 This is an adapted version of the basic Atom Shell wrapper to allow a copy of [`to-fix`](lab.github.io/to-fix) to run on top of JOSM in a corner of the window.
 
-The only thing that makes this a pain is the need to move OAuth credentials over from your real browser to this one (the OSMAuth process does not work in Atom).
+The only thing that makes this a pain is the need to move OAuth credentials over from your real browser to this one (the OSMAuth process does not work in Atom due to an existing bug in the project).
 
 Steps:
 
